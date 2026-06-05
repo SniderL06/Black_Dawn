@@ -1,0 +1,6 @@
+# Videos - now hosted on YouTube, no need to track in Git
+assets/*.mp4
+
+# OS files
+.DS_Store
+Thumbs.db
