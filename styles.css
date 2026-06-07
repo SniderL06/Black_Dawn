@@ -1161,3 +1161,108 @@ textarea.form-input {
     display: none;
   }
 }
+
+/* --- Survivors / Jugadores Section --- */
+.survivors-section {
+  background: #09090b;
+  position: relative;
+}
+
+.survivors-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.survivor-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-dark);
+  transition: var(--transition-smooth);
+  position: relative;
+  background: var(--bg-card);
+}
+
+.survivor-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.survivor-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.survivor-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(138, 6, 6, 0.85) 0%, rgba(7, 7, 8, 0.4) 60%, rgba(7, 7, 8, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.twitch-badge {
+  background: #6441a5;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 20px rgba(100, 65, 165, 0.6);
+  transform: translateY(20px);
+  transition: var(--transition-smooth);
+}
+
+.twitch-badge svg {
+  display: inline-block;
+}
+
+/* Hover states */
+.survivor-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: var(--glow-crimson);
+}
+
+.survivor-card:hover .survivor-img {
+  transform: scale(1.04);
+}
+
+.survivor-card:hover .survivor-overlay {
+  opacity: 1;
+}
+
+.survivor-card:hover .twitch-badge {
+  transform: translateY(0);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .survivors-grid {
+    gap: 2rem;
+  }
+  
+  .survivor-card {
+    max-width: 320px;
+  }
+}
