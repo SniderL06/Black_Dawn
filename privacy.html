@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — FloraStudios</title>
+  <meta name="description" content="Política de Privacidad de FloraStudios y el proyecto Black Dawn.">
+  <link rel="icon" type="image/png" href="assets/flora_logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #c0392b;
+      --primary-glow: rgba(192, 57, 43, 0.3);
+      --bg-dark: #0a0a0a;
+      --bg-card: #111111;
+      --bg-card2: #161616;
+      --text-main: #e8e0d5;
+      --text-muted: #7a7060;
+      --border: rgba(192, 57, 43, 0.15);
+      --border-subtle: rgba(255,255,255,0.05);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(192,57,43,0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    nav a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-muted); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    nav a:hover { color: var(--primary-color); }
+    nav .logo-text { font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 600; color: var(--text-main); }
+    nav .sep { color: var(--border); }
+    nav .current { color: var(--primary-color); font-size: 0.78rem; letter-spacing: 0.08em; }
+    .hero { position: relative; z-index: 1; padding: 5rem 2rem 3rem; text-align: center; border-bottom: 1px solid var(--border-subtle); }
+    .hero-tag { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--primary-color); text-transform: uppercase; margin-bottom: 1.25rem; }
+    .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: #fff; margin-bottom: 1rem; text-shadow: 0 0 60px var(--primary-glow); }
+    .hero-sub { color: var(--text-muted); font-size: 0.9rem; }
+    .hero-line { width: 60px; height: 1px; background: var(--primary-color); margin: 2rem auto 0; box-shadow: 0 0 8px var(--primary-glow); }
+    .container { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+    .toc { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 2rem; margin: 3rem 0; }
+    .toc-title { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--primary-color); text-transform: uppercase; margin-bottom: 1.25rem; }
+    .toc ol { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem; counter-reset: toc; }
+    .toc li { counter-increment: toc; }
+    .toc a { display: flex; align-items: center; gap: 0.6rem; color: var(--text-muted); text-decoration: none; font-size: 0.82rem; padding: 0.35rem 0; transition: color 0.2s; }
+    .toc a::before { content: counter(toc, decimal-leading-zero); font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--primary-color); flex-shrink: 0; }
+    .toc a:hover { color: var(--text-main); }
+    .highlight { background: rgba(192,57,43,0.07); border: 1px solid rgba(192,57,43,0.2); border-radius: 4px; padding: 1rem 1.25rem; margin: 1rem 0; font-size: 0.85rem; }
+    .policy-section { margin: 2.5rem 0; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-left: 2px solid var(--primary-color); border-radius: 0 6px 6px 0; }
+    .policy-section:nth-child(even) { background: var(--bg-card2); }
+    .section-num { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.25em; color: var(--primary-color); display: block; margin-bottom: 0.5rem; }
+    .policy-section h2 { font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 1rem; }
+    .policy-section p { color: var(--text-main); font-size: 0.9rem; margin-bottom: 0.85rem; }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section ul { list-style: none; margin: 0.75rem 0; display: flex; flex-direction: column; gap: 0.5rem; }
+    .policy-section ul li { font-size: 0.9rem; color: var(--text-main); padding-left: 1.25rem; position: relative; }
+    .policy-section ul li::before { content: '›'; position: absolute; left: 0; color: var(--primary-color); font-size: 1rem; }
+    .policy-section a { color: var(--primary-color); }
+    .date-badge { background: rgba(192,57,43,0.1); border: 1px solid rgba(192,57,43,0.25); border-radius: 3px; padding: 0.35rem 0.85rem; font-size: 0.75rem; font-family: 'Cinzel', serif; letter-spacing: 0.1em; color: var(--primary-color); margin: 3rem auto 0; display: block; text-align: center; width: fit-content; }
+    .contact-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 2rem; margin: 2.5rem 0 4rem; text-align: center; }
+    .contact-box h3 { font-family: 'Cinzel', serif; font-size: 1rem; color: #fff; margin-bottom: 0.75rem; }
+    .contact-box p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .contact-box a { color: var(--primary-color); text-decoration: none; font-size: 0.85rem; }
+    footer { position: relative; z-index: 1; border-top: 1px solid var(--border-subtle); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.78rem; }
+    footer span { color: var(--primary-color); }
+    footer a { color: var(--text-muted); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      <span class="logo-text">FloraStudios</span>
+    </a>
+    <span class="sep">/</span>
+    <span class="current">Política de Privacidad</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">FloraStudios — Documentación Legal</div>
+    <h1>Política de<br>Privacidad</h1>
+    <p class="hero-sub">Última actualización: Junio 2026</p>
+    <div class="hero-line"></div>
+  </div>
+
+  <div class="container">
+    <div class="toc">
+      <div class="toc-title">Índice de Contenidos</div>
+      <ol>
+        <li><a href="#s1">Información que recopilamos</a></li>
+        <li><a href="#s2">Uso de la información</a></li>
+        <li><a href="#s3">Cookies y tecnologías</a></li>
+        <li><a href="#s4">Publicidad</a></li>
+        <li><a href="#s5">Servicios de terceros</a></li>
+        <li><a href="#s6">Menores de edad</a></li>
+        <li><a href="#s7">Tus derechos</a></li>
+        <li><a href="#s8">Seguridad</a></li>
+        <li><a href="#s9">Cambios en esta política</a></li>
+        <li><a href="#s10">Contacto</a></li>
+      </ol>
+    </div>
+
+    <div class="highlight">
+      Esta política describe cómo <strong>FloraStudios</strong> recopila, usa y protege la información de los visitantes de <strong>black-dawn.vercel.app</strong>. Al usar este sitio, aceptas las prácticas descritas a continuación.
+    </div>
+
+    <div class="policy-section" id="s1">
+      <span class="section-num">01 —</span>
+      <h2>Información que Recopilamos</h2>
+      <p>Recopilamos información de forma automática y, en algunos casos, directamente proporcionada por el usuario:</p>
+      <ul>
+        <li><strong>Datos de uso:</strong> dirección IP, tipo de navegador, sistema operativo, páginas visitadas y tiempo de permanencia.</li>
+        <li><strong>Datos del formulario de contacto:</strong> nombre, correo electrónico y mensaje enviado voluntariamente.</li>
+        <li><strong>Cookies:</strong> datos de sesión y preferencias de navegación.</li>
+        <li><strong>Datos de publicidad:</strong> información agregada y anonimizada generada por redes publicitarias (Adsterra, Google AdSense).</li>
+      </ul>
+      <p>No recopilamos información sensible como datos bancarios, contraseñas ni documentos de identidad.</p>
+    </div>
+
+    <div class="policy-section" id="s2">
+      <span class="section-num">02 —</span>
+      <h2>Uso de la Información</h2>
+      <p>La información recopilada se utiliza exclusivamente para:</p>
+      <ul>
+        <li>Mejorar el contenido y la experiencia del sitio web.</li>
+        <li>Responder a mensajes enviados a través del formulario de contacto.</li>
+        <li>Analizar el tráfico de forma agregada y anónima.</li>
+        <li>Mostrar publicidad relevante a través de redes de anuncios de terceros.</li>
+        <li>Cumplir con obligaciones legales cuando sea necesario.</li>
+      </ul>
+      <p>No vendemos, alquilamos ni compartimos tu información personal con terceros con fines comerciales propios.</p>
+    </div>
+
+    <div class="policy-section" id="s3">
+      <span class="section-num">03 —</span>
+      <h2>Cookies y Tecnologías de Seguimiento</h2>
+      <p>Este sitio utiliza cookies para mejorar la experiencia del usuario:</p>
+      <ul>
+        <li><strong>Cookies esenciales:</strong> necesarias para el funcionamiento básico del sitio.</li>
+        <li><strong>Cookies de analítica:</strong> permiten analizar el tráfico de forma anónima.</li>
+        <li><strong>Cookies de publicidad:</strong> utilizadas por redes de anuncios para mostrar publicidad relevante.</li>
+      </ul>
+      <p>Puedes configurar tu navegador para rechazar cookies, aunque algunas funciones podrían verse afectadas.</p>
+    </div>
+
+    <div class="policy-section" id="s4">
+      <span class="section-num">04 —</span>
+      <h2>Publicidad</h2>
+      <p>Este sitio muestra anuncios a través de <strong>Adsterra</strong> y <strong>Google AdSense</strong>. Estas redes pueden utilizar cookies para mostrar anuncios basados en tus visitas anteriores a este y otros sitios.</p>
+      <p>Los anunciantes de terceros tienen sus propias políticas de privacidad independientes. Puedes optar por no recibir publicidad personalizada visitando:</p>
+      <ul>
+        <li><a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Configuración de anuncios de Google</a></li>
+        <li><a href="https://www.adsterra.com/privacy-policy/" target="_blank" rel="noopener">Política de privacidad de Adsterra</a></li>
+      </ul>
+    </div>
+
+    <div class="policy-section" id="s5">
+      <span class="section-num">05 —</span>
+      <h2>Servicios de Terceros</h2>
+      <p>Este sitio integra servicios de terceros que pueden recopilar datos según sus propias políticas:</p>
+      <ul>
+        <li><strong>YouTube:</strong> los videos incrustados pueden recopilar datos según la política de Google.</li>
+        <li><strong>Twitch:</strong> los enlaces a streams están sujetos a la política de privacidad de Twitch.</li>
+        <li><strong>Google Fonts:</strong> las fuentes son servidas por Google y pueden registrar solicitudes.</li>
+        <li><strong>Vercel:</strong> plataforma de alojamiento que registra datos de acceso básicos.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section" id="s6">
+      <span class="section-num">06 —</span>
+      <h2>Menores de Edad</h2>
+      <p>No recopilamos intencionalmente información personal de menores de 13 años. Si eres padre o tutor y crees que tu hijo nos ha proporcionado datos personales, contáctanos para eliminarlos de inmediato.</p>
+    </div>
+
+    <div class="policy-section" id="s7">
+      <span class="section-num">07 —</span>
+      <h2>Tus Derechos</h2>
+      <p>Dependiendo de tu ubicación, puedes tener los siguientes derechos sobre tus datos:</p>
+      <ul>
+        <li><strong>Acceso:</strong> solicitar una copia de los datos que tenemos sobre ti.</li>
+        <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+        <li><strong>Eliminación:</strong> solicitar la eliminación de tus datos personales.</li>
+        <li><strong>Oposición:</strong> oponerte al procesamiento para ciertos fines.</li>
+        <li><strong>Portabilidad:</strong> recibir tus datos en un formato legible y estructurado.</li>
+      </ul>
+      <p>Para ejercer estos derechos, contáctanos por correo electrónico.</p>
+    </div>
+
+    <div class="policy-section" id="s8">
+      <span class="section-num">08 —</span>
+      <h2>Seguridad</h2>
+      <p>Implementamos medidas técnicas razonables para proteger la información recopilada. El sitio opera bajo protocolo HTTPS. Sin embargo, ningún sistema de transmisión por Internet es completamente seguro.</p>
+    </div>
+
+    <div class="policy-section" id="s9">
+      <span class="section-num">09 —</span>
+      <h2>Cambios en esta Política</h2>
+      <p>FloraStudios puede actualizar esta política en cualquier momento. Los cambios serán publicados en esta página con la fecha revisada. El uso continuado del sitio implica la aceptación de los cambios.</p>
+    </div>
+
+    <div class="policy-section" id="s10">
+      <span class="section-num">10 —</span>
+      <h2>Contacto</h2>
+      <p>Para cualquier consulta relacionada con esta política:</p>
+      <ul>
+        <li>Formulario de contacto en la página principal</li>
+        <li>Correo: <a href="mailto:florastudiosO@gmail.com">florastudiosO@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="date-badge">Vigente desde Junio 2026 — FloraStudios</div>
+
+    <div class="contact-box">
+      <h3>¿Tienes dudas sobre tu privacidad?</h3>
+      <p>Nuestro equipo está disponible para resolver cualquier consulta.</p>
+      <a href="mailto:florastudiosO@gmail.com">florastudiosO@gmail.com</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 <span>FloraStudios</span>. Todos los derechos reservados. — <a href="index.html">Volver al inicio</a></p>
+  </footer>
+</body>
+</html>
