@@ -27,6 +27,39 @@
   <!-- Scripts -->
   <script src="app.js?v=5" defer></script>
   
+  <style>
+    .ad-bar {
+      width: 100%;
+      background: rgba(0,0,0,0.4);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 0 14px;
+    }
+    .ad-bar__label {
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5a4a3a;
+      opacity: 0.5;
+    }
+    .ad-bar__slots {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .ad-bar__slot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  
   <!-- Google AdSense Verification -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9720231322522281"
      crossorigin="anonymous"></script>
@@ -431,6 +464,29 @@
       </div>
     </section>
 
+    <!-- ══ BARRA DE ANUNCIOS (tras buzón de creadores) ══ -->
+    <div class="ad-bar">
+      <span class="ad-bar__label">Publicidad</span>
+      <div class="ad-bar__slots">
+        <div class="ad-bar__slot">
+          <script>
+            atOptions = {
+              'key' : '108c07965b5ce47d9d2487057d163934',
+              'format' : 'iframe',
+              'height' : 90,
+              'width' : 728,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/108c07965b5ce47d9d2487057d163934/invoke.js"></script>
+        </div>
+        <div class="ad-bar__slot">
+          <script async="async" data-cfasync="false" src="https://pl29682012.effectivecpmnetwork.com/cfeb2e8dd49f3f09ef9810a5350595b3/invoke.js"></script>
+          <div id="container-cfeb2e8dd49f3f09ef9810a5350595b3"></div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <!-- --- FULLSCREEN DIALOG LIGHTBOX --- -->
@@ -471,54 +527,6 @@
     <img src="assets/watermark_snider (3).webp" alt="">
   </div>
 
-  <!-- ══ ANUNCIOS FLOTANTES LATERALES ══ -->
-  <div class="ad-lateral ad-lateral--left" aria-hidden="true">
-    <span class="ad-lateral__label">Publicidad</span>
-    <script>
-      atOptions = {
-        'key' : '108c07965b5ce47d9d2487057d163934',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 160,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/108c07965b5ce47d9d2487057d163934/invoke.js"></script>
-  </div>
-
-  <div class="ad-lateral ad-lateral--right" aria-hidden="true">
-    <span class="ad-lateral__label">Publicidad</span>
-    <script async="async" data-cfasync="false" src="https://pl29682012.effectivecpmnetwork.com/cfeb2e8dd49f3f09ef9810a5350595b3/invoke.js"></script>
-    <div id="container-cfeb2e8dd49f3f09ef9810a5350595b3"></div>
-  </div>
-
-  <style>
-    /* ── Anuncios laterales flotantes ── */
-    .ad-lateral {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 160px;
-      z-index: 50;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
-    .ad-lateral--left  { left: 6px; }
-    .ad-lateral--right { right: 6px; }
-    .ad-lateral__label {
-      font-size: 0.58rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #5a4a3a;
-      opacity: 0.6;
-    }
-    /* Ocultar si no hay espacio suficiente a los lados */
-    @media (max-width: 1500px) {
-      .ad-lateral { display: none; }
-    }
-  </style>
 
 </body>
 </html>
