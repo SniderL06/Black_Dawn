@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 3. Next Event Countdown (Black Dawn 2)
-  // Target date set to August 20, 2026, 18:00:00 (Local Time)
-  const targetDate = new Date('August 14, 2026 18:00:00').getTime();
+  // Target date set to September 3, 2026, 18:00:00 (Local Time)
+  const targetDate = new Date('September 3, 2026 18:00:00').getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
